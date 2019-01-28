@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.MainActivity">
+
+    <!--Main Container-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainContainer">
+
+        <!--Top Navigation System-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutTopNav">
+                <!--Have to include Custom AppBar That i make-->
+            <include layout="@layout/layout_top_tab_view"/>
+
+        </RelativeLayout>
+
+        <!--Middle Navigation System-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutMidNav"
+            android:layout_below="@+id/relLayoutTopNav">
+                <!--Middle Layout for Swiping and Navigation-->
+                <include layout="@layout/layout_center_viewpager"/>
+
+        </RelativeLayout>
+
+        <!--Bottom Navigation System-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutBotNav">
+
+            <include layout="@layout/layout_bottom_navigation_view"/>
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
